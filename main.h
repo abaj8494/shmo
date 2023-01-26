@@ -1,5 +1,5 @@
-bool addition(int*);
-bool subtraction(int*);
-bool multiplication(int*);
-bool division(int*);
-bool percentages(int*);
+bool addition(int*, int*);
+bool subtraction(int*, int*);
+bool multiplication(int*, int*);
+bool division(int*, int*);
+bool percentages(int*, int*);

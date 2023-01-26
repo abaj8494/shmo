@@ -1,10 +1,23 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
+/*
+ * provides terminal clear function
+ *
+ */
 #include "main.h"
+#include <unistd.h>
+// WINDOWS #include <dos.h>
+/*
+ * provides rand
+ *
+ */
+
 
 int main(int argc, char *argv[])
 {
-    int choice, run, score;
+    system("clear");
+    int ex, lvl, run, score;
 
     run = true;
     score = 0;
@@ -17,24 +30,37 @@ int main(int argc, char *argv[])
             "\t4. Division"
             "\t5. Percentages\n");
     printf("> ");
-    scanf("%d", &choice);
+    scanf("%d", &ex);
+    printf("Awesome! What level would you like to practise on?\n");
+    printf("(You may choose from 1, 2 or 3)\n"
+            "> ");
+    scanf("%d", &lvl);
 
     while(run) {
-        switch (choice) {
+        system("clear");
+        printf("To exit the exercise enter -1 at any point\n");
+        sleep(3);
+        switch (ex) {
             case 1:
-                run = addition(&score);
+                run = addition(&score, &lvl);
+                break;
             case 2:
-                run = subtraction(&score);
+                run = subtraction(&score, &lvl);
+                break;
             case 3:
-                run = multiplication(&score);
+                run = multiplication(&score, &lvl);
+                break;
             case 4:
-                run = division(&score);
+                run = division(&score, &lvl);
+                break;
             case 5:
-                run = percentages(&score);
-
+                run = percentages(&score, &lvl);
+                break;
+            default:
+                printf("This is not a valid exercise!\n");
+                sleep(1);
         }
     }
-    printf("You have chosen %d\n", choice);
     return 0;
 
 }
