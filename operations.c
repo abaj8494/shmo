@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include <unistd.h>
-// WINDOWS #include <dos.h>
+#include <dos.h>
 /*
  * provides rand
  *
@@ -15,7 +14,7 @@ bool addition(int *score, int* lvl) {
     time_t t; 
     srand((unsigned) time(&t));
     while (ans != -1) {
-        system("clear");
+        system("cls");
         printf("Your score is %d.\n", *score);
 
         a = rand() % (int) pow(10, *lvl);
@@ -35,7 +34,7 @@ bool subtraction(int *score, int* lvl) {
     time_t t; 
     srand((unsigned) time(&t));
     while (ans != -1) {
-        system("clear");
+        system("cls");
         printf("Your score is %d.\n", *score);
 
         a = rand() % (int) pow(10, *lvl);
@@ -57,7 +56,7 @@ bool multiplication(int *score, int* lvl) {
     time_t t; 
     srand((unsigned) time(&t));
     while (ans != -1) {
-        system("clear");
+        system("cls");
         printf("Your score is %d.\n", *score);
 
         a = rand() % (int) pow(10, *lvl);
@@ -78,7 +77,7 @@ bool division(int *score, int* lvl) {
     time_t t; 
     srand((unsigned) time(&t));
     while (ans != -1) {
-        system("clear");
+        system("cls");
         printf("Your score is %d.\n", *score);
 
         a = rand() % (int) pow(10, *lvl);

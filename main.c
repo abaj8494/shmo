@@ -6,8 +6,7 @@
  *
  */
 #include "main.h"
-#include <unistd.h>
-// WINDOWS #include <dos.h>
+#include <dos.h>
 /*
  * provides rand
  *
@@ -16,7 +15,7 @@
 
 int main(int argc, char *argv[])
 {
-    system("clear");
+    system("cls");
     int ex, lvl, run, score;
 
     run = true;
@@ -37,7 +36,7 @@ int main(int argc, char *argv[])
     scanf("%d", &lvl);
 
     while(run) {
-        system("clear");
+        system("cls");
         printf("To exit the exercise enter -1 at any point\n");
         sleep(3);
         switch (ex) {
