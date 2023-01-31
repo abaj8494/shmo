@@ -38,7 +38,8 @@ int main(int argc, char *argv[])
 
     while(run) {
         system("clear");
-        printf("To exit the exercise enter -1 at any point\n");
+        printf("To exit the exercise enter -1 at any point or "
+                "enter -2 to choose a different exercise.\n");
         sleep(3);
         switch (ex) {
             case 1:

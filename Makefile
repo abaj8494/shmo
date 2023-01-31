@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -g -Wall
 
 shmo: main.c operations.c main.h
-	$(CC) $(CFLAGS) main.c operations.c -o shmo
+	$(CC) $(CFLAGS) main.c operations.c -o shmo -lm
 
 .PHONY: clean
 
