@@ -16,11 +16,10 @@
 
 int main(int argc, char *argv[])
 {
-    system("clear");
-    int ex, lvl, run, score;
+    State game = malloc(sizeof(*game));
 
-    run = true;
-    score = 0;
+    system("clear");
+    bool run = true;
 
     printf("Welcome to an arithmetic builder!\n");
     printf("What would you like to work on today?\n"
@@ -30,32 +29,32 @@ int main(int argc, char *argv[])
             "\t4. Division"
             "\t5. Percentages\n");
     printf("> ");
-    scanf("%d", &ex);
+    scanf("%d", game->ex);
     printf("Awesome! What level would you like to practise on?\n");
     printf("(You may choose from 1, 2 or 3)\n"
             "> ");
-    scanf("%d", &lvl);
+    scanf("%d", game->lvl);
 
     while(run) {
         system("clear");
         printf("To exit the exercise enter -1 at any point or "
                 "enter -2 to choose a different exercise.\n");
         sleep(3);
-        switch (ex) {
+        switch (*game->ex) {
             case 1:
-                run = addition(&score, &lvl);
+                run = addition(game);
                 break;
             case 2:
-                run = subtraction(&score, &lvl);
+                run = subtraction(game);
                 break;
             case 3:
-                run = multiplication(&score, &lvl);
+                run = multiplication(game);
                 break;
             case 4:
-                run = division(&score, &lvl);
+                run = division(game);
                 break;
             case 5:
-                run = percentages(&score, &lvl);
+                run = percentages(game);
                 break;
             default:
                 printf("This is not a valid exercise!\n");

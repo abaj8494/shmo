@@ -1,5 +1,13 @@
-bool addition(int*, int*);
-bool subtraction(int*, int*);
-bool multiplication(int*, int*);
-bool division(int*, int*);
-bool percentages(int*, int*);
+typedef struct StateRep *State;
+
+struct StateRep {
+    int *ex;
+    int *lvl;
+    int score[5];
+};
+
+bool addition(State game);
+bool subtraction(State game);
+bool multiplication(State game);
+bool division(State game);
+bool percentages(State game);

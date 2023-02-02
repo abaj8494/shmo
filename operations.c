@@ -9,8 +9,10 @@
  * provides rand
  *
  */
+#include "main.h"
 
-bool addition(int *score, int* lvl) {
+bool addition(State game) {
+    int *lvl = game->lvl, *score = game->score; 
     int a, b, ans = 0;
     time_t t; 
     srand((unsigned) time(&t));
@@ -31,7 +33,8 @@ bool addition(int *score, int* lvl) {
     else {printf("error.\n"); return false;}
 }
 
-bool subtraction(int *score, int* lvl) {
+bool subtraction(State game) {
+    int *lvl = game->lvl, *score = game->score; 
     int a, b, ans = 0;
     time_t t; 
     srand((unsigned) time(&t));
@@ -52,7 +55,8 @@ bool subtraction(int *score, int* lvl) {
     else {printf("error.\n"); return false;}
 }
 
-bool multiplication(int *score, int* lvl) {
+bool multiplication(State game) {
+    int *lvl = game->lvl, *score = game->score; 
     // implement karatsuba's trick for efficient multiplication
     // consider creating a new c file for this function
     int a, b, ans = 0;
@@ -75,7 +79,8 @@ bool multiplication(int *score, int* lvl) {
     else {printf("error.\n"); return false;}
 }
 
-bool division(int *score, int* lvl) {
+bool division(State game) {
+    int *lvl = game->lvl, *score = game->score; 
     // don't forget about division by 0!
     int a = 1, b = 2, ans = 0;
     time_t t; 
@@ -102,7 +107,7 @@ bool division(int *score, int* lvl) {
     else {printf("error.\n"); return false;}
 }
 
-bool percentages(int *score, int* lvl) {
+bool percentages(State game) {
     printf("This function has not been implemented yet."
             "Please wait for the next version :)\n");
     sleep(5);
